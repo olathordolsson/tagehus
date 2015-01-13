@@ -1,10 +1,11 @@
 		
-		<footer class="l-container o-global-footer" role="contentinfo">
-
+		<footer class="l-container m-global-footer" role="contentinfo">
+				<p class="a-copyright a-fineprint">Copyright &copy; <?php echo date("Y"); ?></p>
 		</footer>
-		
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
-		<script src="js/bundled.min.js"></script>
 
+		<?php wp_footer(); ?>
+		<!--[if lte IE 8]>
+			<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/helpers/selectivizr-min.js"></script>
+		<![endif]-->
 	</body>
 </html>
