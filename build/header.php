@@ -50,8 +50,8 @@
 				 s.parentNode.insertBefore(wf, s);
 			})();
 		</script>
-	
-	  
+	  <title><?php bloginfo('name'); ?></title>
+	  <?php wp_head(); ?>
 	  <!--[if lt IE 9]>
 	  	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 			<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/helpers/html5shiv.js"></script>
@@ -60,9 +60,6 @@
 		<!--[if lte IE 8]>
 			<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/helpers/respond.min.js"></script>
 		<![endif]-->
-		
-	  <title><?php bloginfo('name'); ?></title>
-	  <?php wp_head(); ?>
 	</head>
 	
 	<body <?php body_class(); ?>>
