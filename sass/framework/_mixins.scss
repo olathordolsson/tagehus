@@ -1,0 +1,128 @@
+@charset "UTF-8";
+// MIXINS & FUNCTIONS (prefixes removed since Grunt-setup uses Autoprefixer)
+//==============================================================================================================
+
+@mixin type-to-em( $fontsizepx: 16, $lineheightpx: $body_leading ) {
+	font-size: $fontsizepx / 16 + 0em;
+	line-height: $lineheightpx / $fontsizepx;
+}
+
+// http://snook.ca/archives/html_and_css/font-size-with-rem
+@mixin type-to-rem( $fontsizepx: 16, $lineheightpx: $body_leading ) {
+	font-size: $fontsizepx / 16 + 0em;
+	line-height: $lineheightpx / $fontsizepx;
+}
+
+@mixin type-to-vmin($pxFallback: 16, $vmin: 4, $lineheight: 1.5){
+	font-size: $pxFallback / 16 + 0em; 
+  font-size: $vmin + 0vm;
+  font-size: $vmin + 0vmin;
+  line-height: $lineheight;
+}
+
+@mixin textColumnCount($count)
+{
+  column-count: 				$count;
+}
+
+@mixin textColumnGap($gap)
+{
+  column-gap: 				$gap;
+}
+
+@mixin textColumnBreak($when:always)
+{
+  column-break-before: $when;
+}
+
+@mixin truncate($width: 100%) {
+	width: $width;
+	max-width: 100%;
+	display: block;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+
+@mixin translate($x:0, $y:0){
+  -moz-transform: translate($x,$y);
+  -ms-transform: translate($x,$y);
+  -o-transform: translate($x,$y);
+  -webkit-transform: translate($x,$y);
+  transform: translate($x,$y);
+}
+
+@mixin translate3d($x:0, $y:0, $z:0){
+  -moz-transform: translate3d($x,$y,$z);
+  -ms-transform: translate3d($x,$y,$z);
+  -o-transform: translate3d($x,$y,$z);
+  -webkit-transform: translate3d($x,$y,$z);
+  transform: translate3d($x,$y,$z);
+}
+
+// http://zerosixthree.se/8-sass-mixins-you-must-have-in-your-toolbox/ -- nr 3
+$image-path: '../img' !default;
+$fallback-extension: 'png' !default;
+$retina-suffix: '@2x';
+@mixin background-image($name, $size:false){
+	background-image: url(#{$image-path}/#{$name}.svg);
+	@if($size){
+	  background-size: $size;
+	}
+	.no-svg &{
+	  background-image: url(#{$image-path}/#{$name}.#{$fallback-extension});
+	
+	  @media only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+	    background-image: url(#{$image-path}/#{$name}#{$retina-suffix}.#{$fallback-extension});
+	  }
+	}
+}
+
+@mixin animation($animate...) {
+  $max: length($animate);
+  $animations: '';
+
+  @for $i from 1 through $max {
+    $animations: #{$animations + nth($animate, $i)};
+
+    @if $i < $max {
+      $animations: #{$animations + ", "};
+    }
+  }
+  //-webkit-animation: $animations;
+  //-moz-animation:    $animations;
+  //-o-animation:      $animations;
+  animation:         $animations;
+}
+
+@mixin keyframes($animationName) {
+  //@-webkit-keyframes #{$animationName} {
+  //  @content;
+  //}
+  //@-moz-keyframes #{$animationName} {
+  //  @content;
+  //}
+  //@-o-keyframes #{$animationName} {
+  //  @content;
+  //}
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+
+
+// MULTIGRADIENT
+//==============================================================================================================
+
+@mixin multigradient($firstC: $gradient_top, $secondC: $gradient_33, $thirdC: $gradient_66, $fourthC: $gradient_bottom){
+	background: $thirdC;
+	//background: -moz-linear-gradient(top,  $firstC 0%, $secondC 45%, $thirdC 67%, $fourthC 100%);
+	//background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$firstC), color-stop(33%,$secondC), color-stop(67%,$thirdC), color-stop(100%,$fourthC));
+	//background: -webkit-linear-gradient(top,  $firstC 0%,$secondC 45%,$thirdC 67%,$fourthC 100%);
+	//background: -o-linear-gradient(top,  $firstC 0%,$secondC 45%,$thirdC 67%,$fourthC 100%);
+	//background: -ms-linear-gradient(top,  $firstC 0%,$secondC 45%,$thirdC 67%,$fourthC 100%);
+	background: linear-gradient(to bottom,  $firstC 0%,$secondC 45%,$thirdC 67%,$fourthC 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$firstC}', endColorstr='#{$fourthC}',GradientType=0 );
+}
