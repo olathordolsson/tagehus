@@ -1,8 +1,40 @@
-<?php get_header(); 
+<div class="l-container">
+	<?php $detect = new Mobile_Detect; // Ladda på detect ramverket för att sniffa grej
 
-if (have_posts()) { while (have_posts()) { the_post(); ?>
-	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute( array( 'before' => 'Permalink to: ', 'after' => '' ) ); ?>"><?php the_title(); ?></a>
-	<?php get_template_part( 'example'); 		
-}} // end main loop 
+	if($detect->isMobile() && !$detect->isTablet()){ // om det här är en handhållen grej men INTE tablet.. vad är kvar? MOBILER!
 	
-get_footer(); ?>
+		$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'mobile' );	// Ladda variabeln med url för mobiler
+		
+	} elseif($detect->isMobile()){ // Ovan stämde inte in. Hade det varit en mobil hade snurran inte fortsatt hit. Så vad är kvar? PADDOR!
+	
+		$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'tablet' ); // Ladda variabeln med url för paddor
+		
+	} else { // Inget av ovan stämde in. Vad är kvar? Röset aka DESKTOPS!
+	
+		$thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'desktop' ); // ladda variablen med url för vad som är kvar - desktops
+		
+	}	$url = $thumb['0']; ?>
+
+	<div class="l-container a-post-thumb" style="background-image: linear-gradient(to bottom, rgba(235,235,235,0) 0%,rgba(235,235,235,0) 50%,rgba(235,235,235,1) 100%), url('<?php echo $url ?>'); !important;">
+		<?php get_header(); ?> 
+			<div class="l-span-A9 l-span-C3">
+				<div class="l-span">
+					<?php if ( !function_exists('register_sidebar') || !dynamic_sidebar('Sidebar') ) {} ?>
+				</div>
+			</div>
+			
+			
+			<article class="l-span-A12 l-span-C9">
+				
+				<?php
+				if (have_posts()) { while (have_posts()) { the_post(); ?>
+					<h1 class="a-start a-xlarge"><?php the_title(); ?></h1>
+				<div class="l-span o-paper">	
+					<?php the_content();
+						
+				}}; ?>
+				</div> 
+			<article>	
+	</div>
+</div>
+<?php get_footer(); ?>

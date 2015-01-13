@@ -64,15 +64,15 @@
 	
 	<body <?php body_class(); ?>>
 
-		<header id="js-global-header" class="o-global-header" role="banner">
+		<header id="js-global-header" class="o-global-header l-span" role="banner">
+			<div class="l-span">
 			<?php if(is_front_page()) { echo '<h1>'; } else { echo '<h2>'; } ?>
 				<a id="js-sitename" class="a-sitename" href="<?php bloginfo('url'); ?>" title="<?php bloginfo('name'); ?>"><?php bloginfo('name'); ?></a>
 			<?php if(is_front_page()) { echo '</h1>'; } else { echo '</h2>'; } ?>
-			<nav id="js-global-nav" class="m-global-nav" role="navigation">
-				<a href="#">Link</a>
-				<a href="#">Link</a>
-				<a href="#">Link</a>
+			<nav id="js-global-nav" class="m-global-nav l-pull-right" role="navigation">
+				<a href="#">MENY</a>
 			</nav>
+			</div>
 		</header>
 		
 		

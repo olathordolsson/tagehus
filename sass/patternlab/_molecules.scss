@@ -12,6 +12,23 @@
 
 .m-global__nav{}
 
+.menu-huvudmeny-container .menu{ 
+
+	li{
+	list-style-type: none;
+	}
+
+	li a{
+	color:red;
+	list-style-type: none;
+	}
+	
+	li ul a {
+	color:blue;
+	list-style-type: none;
+	}
+}
+
 
 // FORMS =============================================================================================================
 
@@ -95,6 +112,10 @@ x:-o-prefocus,
 
 
 // COMPONENTS =============================================================================================================
+
+.m-sidebar__widget{
+	list-style-type: none;
+}
 
 
 // INTERACTIVE COMPONENTS =============================================================================================================

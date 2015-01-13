@@ -1,6 +1,8 @@
 		
-		<footer class="l-container m-global-footer" role="contentinfo">
+		<footer class="l-container m-global-footer l-clearfix" role="contentinfo">
+			<div class="l-span-A12">
 				<p class="a-copyright a-fineprint">Copyright &copy; <?php echo date("Y"); ?></p>
+			</div>
 		</footer>
 
 		<?php wp_footer(); ?>

@@ -6,7 +6,12 @@
 // footer
 // aside
 
-.o-global__header{}
+.o-global__header{
+}
+
+.o-global-header{
+	padding: 7em 0;
+}
 
 .o-global__footer{}
 
@@ -82,4 +87,23 @@
 			clear: both;
 		} 
 	}	
+}
+
+// PLATES ================================================================================================================
+
+.o-paper{
+	background-color: white;
+}
+
+.o-grey{
+	background-color: red;
+	z-index: 1;
+}
+
+.o-bg-img{
+	position: absolute;
+}
+
+.o-top{
+	z-index: 3;
 }
