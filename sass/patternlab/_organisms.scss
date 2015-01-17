@@ -10,7 +10,7 @@
 }
 
 .o-global-header{
-	padding: 7em 0;
+	padding: 4em 0 10em 0;
 }
 
 .o-global__footer{}
@@ -93,6 +93,7 @@
 
 .o-paper{
 	background-color: white;
+	padding: 2em 4em 2em 2em;
 }
 
 .o-grey{
@@ -106,4 +107,14 @@
 
 .o-top{
 	z-index: 3;
+}
+
+.o-wrap{
+	margin-top: 6.5em;
+	display: none;
+	
+	@media all and (min-width: $beta_query) {
+	display: block;
+	}
+
 }

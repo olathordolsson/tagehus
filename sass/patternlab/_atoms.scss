@@ -41,7 +41,12 @@ strong,
 }
 
 .a-xlarge{
-	@include type-to-em(74,86);
+	@include type-to-em(52,58);
+	margin-left: .5em;
+	margin-bottom:  1em;
+	font-family: 'Open Sans', sans-serif;
+	opacity: 0.9;
+
 }
 
 .a-large{}
@@ -71,6 +76,32 @@ a{
 em{}
 
 strong{}
+
+h3{
+	@include type-to-em(24,28);
+	margin: 1em 0 0.3em;
+	font-family: 'Open Sans', sans-serif;
+
+
+}
+
+h4{
+	@include type-to-em(18,23);
+	margin: 1em 0 0.3em;
+	font-family: 'Open Sans', sans-serif;
+
+
+}
+
+h5{
+
+}
+
+
+p{
+	
+	line-height: 1.6em;
+}
 
 p + p{
 	margin-top: $leading;
@@ -114,6 +145,29 @@ a[href^="http://domain.com"] {
 }
 
 
+// LIST
+
+ol,
+ul{
+	
+	li + li{
+	
+	}
+}
+
+ol{
+	
+	li{}
+}
+
+ul{
+	margin-left: 0em;
+	li{}
+}
+
+.o-paper ul{
+	margin: 1em 0 1em 1em;
+}
 
 
 

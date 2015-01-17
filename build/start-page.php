@@ -1,3 +1,5 @@
+<?php /* Template Name: Startpage */ ?>
+
 <div class="l-container">
 	<?php $detect = new Mobile_Detect; // Ladda på detect ramverket för att sniffa grej
 
@@ -17,18 +19,18 @@
 
 	<div class="l-container a-post-thumb" style="background-image: linear-gradient(to bottom, rgba(235,235,235,0) 0%,rgba(235,235,235,0) 50%,rgba(235,235,235,1) 100%), url('<?php echo $url ?>'); !important;">
 		<?php get_header(); ?> 
-			<div class="l-span-A9 l-span-B3">
+			<div class="l-span-A9 l-span-C3">
 				<div class="l-span o-wrap">
 					<?php if ( !function_exists('register_sidebar') || !dynamic_sidebar('Sidebar') ) {} ?>
 				</div>
 			</div>
 			
 			
-			<article class="l-span-A12 l-span-B9">
+			<article class="l-span-A12 l-span-C9">
 				
 				<?php
 				if (have_posts()) { while (have_posts()) { the_post(); ?>
-					<h1 class="a-start a-xlarge"><?php the_title(); ?></h1>
+					<p class="a-start"><?php $bloginfo = get_bloginfo(); ?></p>
 				<div class="l-span o-paper">	
 					<?php the_content();
 						

@@ -137,6 +137,10 @@ add_shortcode('caption', 'fixed_img_caption_shortcode');
 //-------------------------------------------------------------------
 
 
+@ini_set( 'upload_max_size' , '64M' );
+@ini_set( 'post_max_size', '64M');
+@ini_set( 'max_execution_time', '300' );
+
 //-------------------------------------------------------------------
 
 

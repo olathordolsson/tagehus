@@ -12,22 +12,103 @@
 
 .m-global__nav{}
 
-.menu-huvudmeny-container .menu{ 
+.m-global-nav{
+	display: none;
+}
+
+.m-footer__widget{
+	padding-right: $gutter_echo_half;
+	padding-left: $gutter_echo_half;
+	float: left;
+}
+
+.textwidget{
+			font-family: 'Open Sans', sans-serif;
+
+}
+
+.menu-item, .m-search__input{ 
+	font-size: 1em;
+		line-height: 2.5em;
+		color:#333;
+		list-style-type: none;
+		font-family: 'Open Sans', sans-serif;
+	list-style-type: none;
+	
+	a{
+			color:#333;
+
+	}
 
 	li{
-	list-style-type: none;
+		
+		list-style-type: none;
 	}
 
 	li a{
-	color:red;
-	list-style-type: none;
+		font-size: 0.876em;
+		color:#666;
+		list-style-type: none;
+		font-family: 'Open Sans', sans-serif;
+		line-height: 2.5em;	
 	}
 	
-	li ul a {
-	color:blue;
-	list-style-type: none;
+	.dcjq-parent{
+		font-size: 1em;
+		line-height: 2.5em;
+		color:#333;
+		list-style-type: none;
+		font-family: 'Open Sans', sans-serif;
+	}
+	
+	ul{
+		margin-left: 0.5em;
 	}
 }
+
+.m-search__input:focus {
+    border-bottom: 1px solid black;
+    width: auto;
+} 
+
+.m-search__input{
+	margin: 0;
+	border: 0;
+	background-color: transparent;
+	width: 11%;
+	line-height: 1.3em;
+	overflow: visible;
+}
+
+button{
+	padding-bottom: .3em;
+}
+
+::-webkit-input-placeholder {
+   color:#333;
+   opacity: .9;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color:#333;  
+      opacity: .9;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color:#333;  
+      opacity: .9;
+}
+
+:-ms-input-placeholder {  
+   color:#333;  
+      opacity: .9;
+}
+
+.icon-search:before {
+	font-size: 0.876em;
+	line-height: 1.3em;
+}
+
 
 
 // FORMS =============================================================================================================

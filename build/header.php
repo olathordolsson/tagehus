@@ -17,6 +17,8 @@
 		<link href="<?php bloginfo('stylesheet_directory'); ?>/img/touchIcons/apple-touch-icon-precomposed-144.png" sizes="144x144" rel="apple-touch-icon-precomposed">
 		<link href="<?php bloginfo('stylesheet_directory'); ?>/img/touchIcons/apple-touch-icon-152x152.png" rel="apple-touch-icon" sizes="152x152">
 		
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+		
 		<meta name="msapplication-TileImage" content="<?php bloginfo('stylesheet_directory'); ?>/img/touchIcons/favicon-144.png">
 		<meta name="msapplication-TileColor" content="<?php get_template_part('partials/ms-tile-color'); ?>"/>
 		<meta name="application-name" content="<?php bloginfo('name'); ?>" />
