@@ -77,20 +77,21 @@ em{}
 
 strong{}
 
+h3,
+h4,
+h5{
+	font-family: 'Open Sans', sans-serif;
+	margin: 1em 0 0.3em;
+
+}
+
+
 h3{
 	@include type-to-em(24,28);
-	margin: 1em 0 0.3em;
-	font-family: 'Open Sans', sans-serif;
-
-
 }
 
 h4{
 	@include type-to-em(18,23);
-	margin: 1em 0 0.3em;
-	font-family: 'Open Sans', sans-serif;
-
-
 }
 
 h5{
@@ -99,7 +100,6 @@ h5{
 
 
 p{
-	
 	line-height: 1.6em;
 }
 
@@ -110,9 +110,9 @@ p + p{
 
 a[href^="http://"] {
 	-ms-word-break: break-all;
-  word-break: break-all;
-  word-break: break-word;
-  hyphens: auto;
+  	word-break: break-all;
+  	word-break: break-word;
+  	hyphens: auto;
 }
 
 a[href^="http://www.domain.com"], 

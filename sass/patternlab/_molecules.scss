@@ -10,8 +10,6 @@
 
 // NAVIGATION =============================================================================================================
 
-.m-global__nav{}
-
 .m-global-nav{
 	display: none;
 }
@@ -23,20 +21,20 @@
 }
 
 .textwidget{
-			font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 
 }
 
 .menu-item, .m-search__input{ 
 	font-size: 1em;
-		line-height: 2.5em;
-		color:#333;
-		list-style-type: none;
-		font-family: 'Open Sans', sans-serif;
+	line-height: 2.5em;
+	color:#333;
+	list-style-type: none;
+	font-family: 'Open Sans', sans-serif;
 	list-style-type: none;
 	
 	a{
-			color:#333;
+		color:#333;
 
 	}
 
@@ -85,23 +83,23 @@ button{
 }
 
 ::-webkit-input-placeholder {
-   color:#333;
-   opacity: .9;
+   	color:#333;
+   	opacity: .9;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color:#333;  
-      opacity: .9;
+   	color:#333;  
+	opacity: .9;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color:#333;  
-      opacity: .9;
+   	color:#333;  
+    opacity: .9;
 }
 
 :-ms-input-placeholder {  
-   color:#333;  
-      opacity: .9;
+   	color:#333;  
+    opacity: .9;
 }
 
 .icon-search:before {
@@ -116,47 +114,47 @@ button{
 .m-dropdown__wrap {
 
 	.m-dropdown {
-    position: relative;
-    display: block;
-    background: $body;
+    	position: relative;
+    	display: block;
+    	background: $body;
 	}
 	
 	.m-dropdown::after {
-	  content: ' ';
-	  display: block;
-	  position: absolute;
-	  top: 50%;
-	  right: $leading;
-	  z-index: 10;
-	  width: 0;
-	  height: 0;
-	  margin-top: -4px;
-	  border-style: solid;
-	  border-width: 8px 6px 0 6px;
-	  border-color: $action transparent transparent transparent;
-	  pointer-events: none;
+	  	content: ' ';
+	  	display: block;
+	  	position: absolute;
+	  	top: 50%;
+	  	right: $leading;
+	  	z-index: 10;
+	  	width: 0;
+	  	height: 0;
+	  	margin-top: -4px;
+	  	border-style: solid;
+	  	border-width: 8px 6px 0 6px;
+	  	border-color: $action transparent transparent transparent;
+	  	pointer-events: none;
 	}
 	
 	body:last-child .m-dropdown .a-select,
 	x:-moz-any-link {
-    padding-right: .8em;
+    	padding-right: .8em;
 	}
 }
 
 @media screen and (-ms-high-contrast: active),
 (-ms-high-contrast: none) {
   .m-dropdown .a-select::-ms-expand {
-    display: none;
+    	display: none;
   }
 
   .a-select:focus::-ms-value {
-    background: transparent;
+    	background: transparent;
   }
 }
 
 body:last-child .m-dropdown::after,
 x:-moz-any-link {
-    display: none;
+	display: none;
 }
 
 /* Firefox 7+ */
@@ -179,7 +177,7 @@ body:last-child .m-dropdown .a-select {
 
 x:-o-prefocus,
 .m-dropdown::after {
-  display: none;
+  	display: none;
 }
 
 
@@ -202,25 +200,25 @@ x:-o-prefocus,
 // INTERACTIVE COMPONENTS =============================================================================================================
 
 .m-toggled__elem {
-  padding: $leading 0;
-  transform: translateZ(0);
+  	padding: $leading 0;
+  	transform: translateZ(0);
 }
 
 .js .m-expand-section {
-  position: relative;
-  overflow: hidden;
+  	position: relative;
+  	overflow: hidden;
 
-  &:after {
-	  content: ' ';
-	  display: block;
-	  position: absolute;
-	  z-index: 50;
-	  bottom: 0;
-	  width: 100%;
-	  height: $leading*3.5;
-	  opacity: 1;
-	  background-image: linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
-	  pointer-events: none;
+  	&:after {
+	  	content: ' ';
+	  	display: block;
+	  	position: absolute;
+	  	z-index: 50;
+	  	bottom: 0;
+	  	width: 100%;
+	  	height: $leading*3.5;
+	  	opacity: 1;
+	  	background-image: linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+	  	pointer-events: none;
   }
 }
 
